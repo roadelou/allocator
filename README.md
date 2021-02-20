@@ -1,6 +1,6 @@
 # Allocator
 
-Since the question was raised around me recently, I looked into memory allocation algorithms. In this repository, I have implemented a simple __First Fit__ allocation algorithm based on a __Circular Single Linked List__. The challendge here to implement this allocation mecanism without using a preexisting `malloc`. Instead here there is a limit on how many allocations can occur at one.
+Since the question was raised around me recently, I looked into memory allocation algorithms. In this repository, I have implemented a simple __First Fit__ allocation algorithm based on a __Circular Single Linked List__. The challendge here to implement this allocation mecanism without using a preexisting `malloc`. Instead here there is a limit on how many allocations can occur at once.
 
 ## How it works
 
