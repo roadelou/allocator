@@ -10,6 +10,15 @@ Basically, the memory will be represented with _segments_ that have a start addr
 
 The segments are then sorted by ascending start address in a circular linked list, which simplifies merging adjacent segments when memory is set free. Single or double linked list can be used, but this repository uses single linked list. From this experience, I would say that a double linked list would likely be a better choice, likely worth the overhead.
 
+## Update
+
+After working on memory allocation once more, I realized I had not really spent enough time searching how the algorithm worked, and that I had made several mistakes in this implementation :arrow_down_small:
+
+ - The algorithm uses a simple linked list, not a circular linked list.
+ - The list is alway sorted, which solves the issues I thought I would have when merging back some segments.
+
+I have gained more experience by reimplementing an allocation algorithm based on the `pos_alloc` of the [pulp-runtime kernel](https://github.com/pulp-platform/pulp-runtime/blob/master/kernel/alloc.c), and I changed my opinion on double linked list, I don't believe they are necessary here.
+
 ## Disclaimer
 
 > Even for a side project, this codebase is kind of messy, as I had not written complex C code in a while and forgot how map VS copy of structs worked in C. Also, I didn't care too much, as the code won't be used by anyone and I was more interested in learning the algorithm itself.
